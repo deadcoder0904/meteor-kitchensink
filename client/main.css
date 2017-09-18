@@ -1,0 +1,92 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+h1 {
+  text-align: center;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  color: rgb(221, 240, 138);
+  text-shadow: 4px 4px 8px #121312;
+  font-size: 64px;
+}
+
+#app {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  list-style-type: none;
+}
+
+li {
+  font-size: 18px;
+  line-height: 3;
+  font-family: "Tahoma";
+  text-transform: uppercase;
+  width: 700px;
+  text-align: center;
+  padding: 10px;
+  margin: 10px;
+}
+
+.item {
+  display: flex;
+}
+
+.item > span {
+  flex: 3;
+  cursor: pointer;
+}
+
+.item > button {
+  font-size: 24px;
+  border-width: 0px;
+  color: #0643e9;
+  width: 50px;
+  background: transparent;
+  outline: none;
+  cursor: pointer;
+}
+
+.completed {
+  text-decoration: line-through;
+  background: #52388d;
+  border-radius: 20px;
+  color: white;
+}
+
+[name="form"] {
+  display: flex;
+  text-align: center;
+  margin-top: 20px;
+}
+
+[name="todo"] {
+  width: 400px;
+  height: 50px;
+  text-align: center;
+  font-size: 24px;
+  padding: 12px;
+  margin: 0 20px 0 20px;
+}
+
+.btn {
+  display: block;
+  flex: 1;
+  font-size: 24px;
+  padding: 12px;
+  margin: 0 20px 0 20px;
+  border-width: 0px;
+  cursor: pointer;
+}
+
+#saveBtn {
+  background: rgba(33, 177, 196, 0.75);
+  color: white;
+}
+
+#deleteAll {
+  background: rgba(218, 92, 33, 0.75);
+  color: #ffffff;
+}
