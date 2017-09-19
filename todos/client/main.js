@@ -15,6 +15,7 @@ Meteor.startup(() => {
       item.addEventListener("click", callback);
     });
   }
+  Meteor.subscribe("todos");
 
   Meteor.autorun(() => {
     var todos = Todos.find().fetch();

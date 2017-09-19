@@ -1,6 +1,10 @@
 import { Meteor } from "meteor/meteor";
 import Todos from "./todoSchema";
 
+if (Meteor.isServer) {
+  Meteor.publish("todos", () => Todos.find());
+}
+
 Meteor.methods({
   "todos.insert"(text) {
     Todos.insert({
