@@ -1,4 +1,5 @@
 import { Meteor } from "meteor/meteor";
+import { Tracker } from "meteor/tracker";
 import Todos from "../imports/api/todoSchema";
 
 var sel = el => document.querySelector(el);
@@ -17,7 +18,7 @@ Meteor.startup(() => {
   }
   Meteor.subscribe("todos");
 
-  Meteor.autorun(() => {
+  Tracker.autorun(() => {
     var todos = Todos.find().fetch();
     var items = [];
     todos.map(todo => {
